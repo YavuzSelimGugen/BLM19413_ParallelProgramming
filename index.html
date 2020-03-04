@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/uswds-2.5.0/css/uswds.min.css" />
+    <title>Index</title>
+</head>
+
+<body>
+
+    <div class="usa-overlay"></div>
+    <header class="usa-header usa-header--basic">
+        <div class="usa-nav-container">
+            <div class="usa-navbar">
+                <div class="usa-logo" id="basic-logo">
+                    <em class="usa-logo__text"><a href="/" title="Home" aria-label="Home">
+                            BLM19413E Parallel Programming
+                        </a></em>
+                </div>
+                <button class="usa-menu-btn">Menu</button>
+            </div>
+            <nav aria-label="Primary navigation" class="usa-nav">
+                <button class="usa-nav__close"><img src="/assets/img/close.svg" alt="close"></button>
+                <ul class="usa-nav__primary usa-accordion">
+
+                    <li class="usa-nav__primary-item">
+                        <a class="usa-nav__link" href="javascript:void(0)"><span>Github link</span></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <br><br>
+    <main id="main-content">
+
+        <div class="grid-container">
+            <div class="grid-row">
+                <div class="grid-col">
+                    <div class="usa-accordion usa-accordion--bordered">
+
+                        <!-- Use the accurate heading level to maintain the document outline -->
+                        <h2 class="usa-accordion__heading">
+                            <button class="usa-accordion__button"  aria-controls="b-a1">
+                                Week 1
+                            </button>
+                        </h2>
+                        <div id="b-a1" class="usa-accordion__content usa-prose">
+                            <p>
+                                <ul style="list-style-type:circle;">
+                                    <li>
+                                        Von Noumann: Data ve instruction'lar 0 ve 1 ile ifade edilir.
+                                    </li>
+                                    <li>
+                                        <b>Principal of Parallel Computing (S.S)</b>
+                                    </li>
+                                    <li>
+                                        Granulity: Mesajlasma suresi ile hesaplama suresinin orani. <br>
+                                        Mesajlasma suresinin az olmasi makbul.
+                                    </li>
+                                    <li>
+                                        Data Dependency <br>
+
+                                        For i"<"100 a[i]=a[i-1] + 1 (a[i] a[i-1]'e bagimli!) </li>
+                                    <li>
+                                        OverHead: Mesajlasma yuku ve fazla hesaplama yuzunden olusan yavaslik problemi
+                                        <br>
+                                        Tradeoff:
+                                    </li>
+                                    <li>
+                                        Flynn Taxonomy
+                                    </li>
+                                    <li>
+                                        <b>
+                                            Maximum speedup (S.S -> Soru cozumu) <br>
+                                            p/ 1+(p-1)f
+                                        </b>
+
+                                    </li>
+                                    <li>
+                                        Bir programin speedup grafigi ne kadar lineer speedup grafigine yakinsa o kadar
+                                        olceklenebilirdir (scalable).
+                                    </li>
+                                    <li>
+                                        Gustafson's law: Data size'na gore performans olcegi.
+                                    </li>
+                                    <li>
+                                        MPI -> Process distrubuted <br>
+                                        OpenMP -> Thread shared
+                                    </li>
+                                    <li style=" font-family: 'Courier New', Courier, monospace;">
+
+                                        Bazi MPI komutlari: <br>
+
+                                        MPI.init(NULL, NULL) <br>
+                                        //islemler <br>
+                                        MPI.Finalize() <br>
+
+                                        >mpicc hello.c  <i>//paralel olarak derlemek icin</i> <br>
+                                        >mpirun -np 4 ./hello.x <i> // -np parametresi kac adet cekirdek kullanilacagini </i><br>
+                                        belirtir. <br>
+
+                                        MPI_Barrier(MPI_COMM_WORLD); <i>// Bütün processler bu satıra gelene kadar tüm <br>
+                                        processler bekler. <br></i>
+
+                                        MPI_Comm_size(MPI_COMM_WORLD, &size); <i> //MPI_COMM'un içinde kaç tane comm var. <br></i>
+                                        MPI_Comm_rank(MPI_COMM_WORLD, &rank); <i> //Çalışan processin rankını verir. </i><br>
+
+
+                                    </li>
+                                </ul>
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </main>
+
+
+    <script src="assets/uswds-2.5.0/js/uswds.min.js"></script>
+</body>
+
+</html>
